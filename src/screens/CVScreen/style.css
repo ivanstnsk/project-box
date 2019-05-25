@@ -1,0 +1,9 @@
+.cv-root {
+  background-color: green;
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
