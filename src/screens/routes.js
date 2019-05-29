@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import ScreenContainer from './ScreenContainer';
+import ScreenSwitch from './ScreenSwitch';
 import MainScreen from './MainScreen';
 import ContactsScreen from './ContactsScreen';
 import CVScreen from './CVScreen';
@@ -16,11 +16,11 @@ export default function AppRouter() {
             <Link to="/cv">CV</Link>
             <Link to="/">Main</Link>
           </div>,
-          <ScreenContainer location={location} key="container">
+          <ScreenSwitch location={location} key="container">
             <Route path="/" exact component={MainScreen} />
             <Route path="/contacts" component={ContactsScreen} />
             <Route path="/cv" component={CVScreen} />
-          </ScreenContainer>
+          </ScreenSwitch>
         ]}
       />
     </Router>

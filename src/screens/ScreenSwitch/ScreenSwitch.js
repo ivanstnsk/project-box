@@ -4,7 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import style from './style';
 
-export default class MainScreen extends Component {
+export default class ScreenSwitch extends Component {
   render() {
     return (
       <TransitionGroup className="screen-container">

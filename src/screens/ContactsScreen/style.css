@@ -1,9 +1,15 @@
 .contacts-root {
-  background-color: red;
+  background-color: #fff;
   transition: 0.5s;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+.contacts-container {
+  margin: 20px;
+  border: 1px solid blue;
+  height: 100%;
 }
