@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 
-import style from './style';
+import ScreenContainer from '../ScreenContainer';
+// import style from './style';
 
-export default class MainScreen extends Component {
+export default class ContactsScreen extends Component {
   render() {
-    return <div className="contacts-root"><div className="contacts-container">Contacts</div></div>;
+    return (
+      <ScreenContainer title="Contacts page">
+        <div>
+          Contacts
+        </div>
+      </ScreenContainer>
+    );
   }
 }

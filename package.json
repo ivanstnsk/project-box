@@ -13,13 +13,16 @@
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
     "react-router-dom": "5.0.0",
-    "react-transition-group": "4.0.1"
+    "react-transition-group": "4.0.1",
+    "style.css": "1.0.0"
   },
   "devDependencies": {
-    "babel-core": "6.26.3",
-    "babel-preset-env": "1.7.0",
-    "babel-preset-es2015": "6.24.1",
-    "babel-preset-react": "6.24.1",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.5",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/polyfill": "7.4.4",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-react": "7.0.0",
     "parcel-bundler": "1.12.3",
     "react-hot-loader": "4.8.8"
   }
