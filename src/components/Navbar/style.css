@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  z-index: 100;
+}
+
+.navbar-item {
+  background: #FFFFFF;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-item:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}

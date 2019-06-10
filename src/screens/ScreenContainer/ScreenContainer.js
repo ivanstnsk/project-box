@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom'
+
+import UIManager from '../../managers/UIManager';
 
 import './style';
 
@@ -7,31 +8,35 @@ const W = document.body.offsetWidth;
 const H = document.body.offsetHeight;
 const marginTop = H * 0.02;
 const marginRight = W * 0.018;
-const marginLeft = W * 0.1;
 
 class ScreenContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isHiding: false,
-      isContentVisible: true,
+      isContentVisible: false,
     };
   }
 
+  componentDidMount() {
+    this.timer = setTimeout(() => {
+      this.setState({ isContentVisible: true });
+    }, 300);
+  }
+
   hide = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       this.setState({ isHiding: true, isContentVisible: false });
-      setTimeout(() => {
+      this.timer = setTimeout(() => {
         this.setState({ isContentVisible: true });
         resolve();
       }, 300);
     })
   }
 
-  async goTo(link) {
-    await this.hide();
-    const { history } = this.props;
-    history.push(link);
+  componentWillUnmount() {
+    clearTimeout(this.timer);
+    UIManager.resetReadyState();
   }
 
   render() {
@@ -46,7 +51,6 @@ class ScreenContainer extends Component {
     const styles = {
       marginTop,
       marginRight,
-      marginLeft,
     }
     return (
       <div className="main-root">
@@ -58,9 +62,6 @@ class ScreenContainer extends Component {
                 <div className="screen-container-header-underline" />
               </div>
               <div>
-                <button onClick={() => this.goTo('/contacts')}>To contacts</button>
-                <button onClick={() => this.goTo('/cv')}>To cv</button>
-                <button onClick={() => this.goTo('/')}>To main</button>
                 {children}
               </div>
             </>
@@ -72,5 +73,4 @@ class ScreenContainer extends Component {
   }
 }
 
-export default withRouter(ScreenContainer);
-// export default ScreenContainer;
+export default ScreenContainer;

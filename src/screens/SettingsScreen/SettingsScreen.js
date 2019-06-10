@@ -5,14 +5,14 @@ import UIManager from '../../managers/UIManager';
 import ScreenContainer from '../ScreenContainer';
 // import style from './style';
 
-export default class MainScreen extends Component {
+export default class SettingsScreen extends Component {
   render() {
     return (
-      <ScreenContainer title="Main page" ref={ref => {
+      <ScreenContainer title="Settings page" ref={ref => {
         UIManager.anchorPage(ref);
       }}>
         <div>
-          Main
+          Settings
         </div>
       </ScreenContainer>
     );
