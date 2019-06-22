@@ -65,10 +65,10 @@ class ScreenContainer extends Component {
                 <div className="screen-container-header-content">
                   {title}
                 </div>
-                {/* <button
+                <button
                   className="screen-container-header-close"
                   onClick={this.handleClose}
-                /> */}
+                />
                 <div className="screen-container-header-underline" />
               </div>
               <div>

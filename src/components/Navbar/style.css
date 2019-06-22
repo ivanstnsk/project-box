@@ -8,7 +8,7 @@
 }
 
 .navbar-item {
-  background: #FFFFFF;
+  background: #ffffff;
   outline: none;
   border: none;
   cursor: pointer;
@@ -18,4 +18,8 @@
 .navbar-item:hover {
   transform: scale(1.1);
   transition: 0.3s;
+}
+
+.navbar-item-active {
+  border: 0.08vw solid #3f9b06;
 }

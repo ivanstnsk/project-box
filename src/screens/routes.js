@@ -12,11 +12,11 @@ import AppLayout from '../components/AppLayout';
 import Navbar from '../components/Navbar';
 
 const pages = [
-  { label: 'CV', link: 'cv' },
-  { label: 'Main', link: '/' },
-  { label: 'Portfolio', link: 'portfolio' },
-  { label: 'Contacts', link: 'contacts' },
-  { label: 'Settings', link: 'settings' }
+  { label: 'cv', link: '/cv' },
+  { label: 'main', link: '/' },
+  { label: 'portfolio', link: '/portfolio' },
+  { label: 'contacts', link: '/contacts' },
+  { label: 'settings', link: '/settings' }
 ];
 
 export default function AppRouter() {
