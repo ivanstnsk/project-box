@@ -8,12 +8,13 @@ import ScreenContainer from '../ScreenContainer';
 export default class CVScreen extends Component {
   render() {
     return (
-      <ScreenContainer title="CV page" ref={ref => {
-        UIManager.anchorPage(ref);
-      }}>
-        <div>
-          CV
-        </div>
+      <ScreenContainer
+        title="CV page"
+        ref={ref => {
+          UIManager.anchorPage(ref);
+        }}
+      >
+        <div>CV</div>
       </ScreenContainer>
     );
   }

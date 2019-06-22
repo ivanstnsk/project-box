@@ -8,12 +8,13 @@ import ScreenContainer from '../ScreenContainer';
 export default class MainScreen extends Component {
   render() {
     return (
-      <ScreenContainer title="Main page" ref={ref => {
-        UIManager.anchorPage(ref);
-      }}>
-        <div>
-          Main
-        </div>
+      <ScreenContainer
+        title="Main page"
+        ref={ref => {
+          UIManager.anchorPage(ref);
+        }}
+      >
+        <div>Main</div>
       </ScreenContainer>
     );
   }

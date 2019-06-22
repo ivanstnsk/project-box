@@ -16,25 +16,24 @@ const pages = [
   { label: 'Main', link: '/' },
   { label: 'Portfolio', link: 'portfolio' },
   { label: 'Contacts', link: 'contacts' },
-  { label: 'Settings', link: 'settings' },
+  { label: 'Settings', link: 'settings' }
 ];
 
 export default function AppRouter() {
   return (
     <Router history={UIManager.history}>
       <Route
-        render={({ location }) => (
+        render={({ location }) =>
           <AppLayout>
             <Navbar items={pages} key="navbar" />
             <ScreenSwitch location={location} key="container">
-             <Route path="/" exact component={MainScreen} />
-             <Route path="/contacts" component={ContactsScreen} />
-             <Route path="/cv" component={CVScreen} />
-             <Route path="/portfolio" component={PortfolioScreen} />
-             <Route path="/settings" component={SettingsScreen} />
+              <Route path="/" exact component={MainScreen} />
+              <Route path="/contacts" component={ContactsScreen} />
+              <Route path="/cv" component={CVScreen} />
+              <Route path="/portfolio" component={PortfolioScreen} />
+              <Route path="/settings" component={SettingsScreen} />
             </ScreenSwitch>
-          </AppLayout>
-        )}
+          </AppLayout>}
       />
     </Router>
   );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import UIManager from '../../managers/UIManager';
 
@@ -14,7 +14,7 @@ class ScreenContainer extends Component {
     super(props);
     this.state = {
       isHiding: false,
-      isContentVisible: false,
+      isContentVisible: false
     };
   }
 
@@ -24,15 +24,18 @@ class ScreenContainer extends Component {
     }, 300);
   }
 
-  hide = () => {
-    return new Promise((resolve) => {
+  hide = () =>
+    new Promise(resolve => {
       this.setState({ isHiding: true, isContentVisible: false });
       this.timer = setTimeout(() => {
         this.setState({ isContentVisible: true });
         resolve();
       }, 300);
-    })
-  }
+    });
+
+  handleClose = () => {
+    console.log('closing');
+  };
 
   componentWillUnmount() {
     clearTimeout(this.timer);
@@ -50,23 +53,28 @@ class ScreenContainer extends Component {
     }
     const styles = {
       marginTop,
-      marginRight,
-    }
+      marginRight
+    };
     return (
       <div className="main-root">
         <div className={containerClasses.join(' ')} style={styles}>
-          {!isHiding && isContentVisible && (
-            <>
+          {!isHiding &&
+            isContentVisible &&
+            <Fragment>
               <div className="screen-container-header">
-                {title}
+                <div className="screen-container-header-content">
+                  {title}
+                </div>
+                {/* <button
+                  className="screen-container-header-close"
+                  onClick={this.handleClose}
+                /> */}
                 <div className="screen-container-header-underline" />
               </div>
               <div>
                 {children}
               </div>
-            </>
-          )
-          }
+            </Fragment>}
         </div>
       </div>
     );

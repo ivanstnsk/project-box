@@ -80,6 +80,15 @@
   position: relative;
 }
 
+.screen-container-header-content {
+  display: flex;
+  flex: 1;
+}
+
+.screen-container-header-close {
+
+}
+
 .screen-container-header-underline {
   position: absolute;
   left: 50px;

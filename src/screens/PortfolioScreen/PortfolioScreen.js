@@ -8,12 +8,13 @@ import ScreenContainer from '../ScreenContainer';
 export default class PortfolioScreen extends Component {
   render() {
     return (
-      <ScreenContainer title="Portfolio page" ref={ref => {
-        UIManager.anchorPage(ref);
-      }}>
-        <div>
-          Portfolio
-        </div>
+      <ScreenContainer
+        title="Portfolio page"
+        ref={ref => {
+          UIManager.anchorPage(ref);
+        }}
+      >
+        <div>Portfolio</div>
       </ScreenContainer>
     );
   }

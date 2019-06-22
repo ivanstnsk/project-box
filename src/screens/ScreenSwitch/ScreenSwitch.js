@@ -13,7 +13,9 @@ export default class ScreenSwitch extends Component {
           timeout={{ enter: 200, exit: 200 }}
           classNames="fade"
         >
-          <Switch location={this.props.location}>{this.props.children}</Switch>
+          <Switch location={this.props.location}>
+            {this.props.children}
+          </Switch>
         </CSSTransition>
       </TransitionGroup>
     );
