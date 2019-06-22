@@ -1,5 +1,7 @@
 .app-layout {
   display: flex;
   flex: 1;
+  height: 100vh;
   flex-direction: row;
+  overflow-y: hidden;
 }
