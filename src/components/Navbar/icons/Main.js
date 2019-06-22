@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ContactsIcon({ active }) {
+export default function MainIcon({ active }) {
   const color = active ? '#3F9B06' : '#666666';
   const side = document.body.offsetWidth * 0.029;
   return (
